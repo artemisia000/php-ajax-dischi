@@ -16,18 +16,21 @@
     </header>
 
     <main>
- 
+    <pre>
+        <?php
+        function viewcd($el){
+            echo "<h2>{$el["title"]}";
+            echo "<p><img src={$el["poster"]}>";
+        }
+            include "api-users.php";
+            foreach($database as $el){
+                viewcd($el);
+            }
+        ?>
 
-       <div id="app" >
+        </pre>
 
-            <ul>
-                <li v-for="(cd, index) in database"
-                    :key="`cd-id-${index}`">
-                    {{ cd.title }} 
-                </li>
-            </ul>
 
-        </div>
     </main>
 
 

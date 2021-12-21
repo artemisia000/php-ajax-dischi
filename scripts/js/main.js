@@ -3,18 +3,25 @@
 const app = new Vue({
     el: '#app',
     data: {
-        users: null,
+        database: null,
     },
     created() {
-        this.getUsers();
+        this.getCds();
         
     },
 
     methods: {
-        getUsers() {
+        getCds() {
             console.log('GET DATA');
 
-            axios.get('')
-        }
-    }
+            axios.get('http://localhost/php-ajax-dischi/scripts/api-users.php')
+            .then(response => {
+                console.log(response.data);
+                this.database = response.data;
+            })
+            .catch(err => {
+                console.log(err);
+            });
+        },
+    },
 });
