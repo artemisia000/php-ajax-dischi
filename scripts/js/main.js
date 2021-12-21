@@ -13,8 +13,8 @@ const app = new Vue({
     methods: {
         getCds() {
             console.log('GET DATA');
-
-            axios.get('http://localhost/php-ajax-dischi/scripts/api-users.php')
+            axios.get('./api-users.php')
+            axios.get('http://localhost/php-ajax-dischi/php-ajax-dischi/scripts/api-users.php')
             .then(response => {
                 console.log(response.data);
                 this.database = response.data;

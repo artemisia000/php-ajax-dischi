@@ -22,7 +22,7 @@
 
             <ul>
                 <li v-for="(cd, index) in database"
-                    :key="`cd-id-${index}`">
+                    :key="cd">
                     {{ cd.title }} 
                 </li>
             </ul>
