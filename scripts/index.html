@@ -12,25 +12,28 @@
 
     <header>
         <h1>DISCHI PHP</h1>
-
     </header>
 
     <main>
- 
-
        <div id="app" >
 
             <ul>
-                <li v-for="(cd, index) in database"
-                    :key="cd">
-                    {{ cd.title }} 
+                <li v-for="(album, index) in albums"
+                    :key="`album-${index}`">
+
+                    <img
+                        width="200"
+                        :src="album.poster" 
+                        :alt="album.title"
+                    />
+                    <h3> {{album.title}} </h3>
+                    <h4> {{album.author}} </h4>
+                    <p> {{album.year}} </p>
+                    <p> {{album.genre}} </p>  
                 </li>
             </ul>
-
         </div>
     </main>
-
-
 
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="./js/main.js"></script>

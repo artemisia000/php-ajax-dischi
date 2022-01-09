@@ -1,7 +1,7 @@
 
 <?php
 
-$database = [
+$albums = [
     [
         'title' => 'New Jersey',
         'author' => 'Bon Jovi',

@@ -3,18 +3,15 @@
 const app = new Vue({
     el: '#app',
     data: {
-        database: null,
+        albums: null,
     },
     created() {
-        this.getCds();
-        
+        this.getCds();     
     },
 
     methods: {
         getCds() {
-            console.log('GET DATA');
-            axios.get('./api-users.php')
-            axios.get('http://localhost/php-ajax-dischi/php-ajax-dischi/scripts/api-users.php')
+            axios.get('http://localhost/php-ajax-dischi/scripts/api-users.php')
             .then(response => {
                 console.log(response.data);
                 this.database = response.data;

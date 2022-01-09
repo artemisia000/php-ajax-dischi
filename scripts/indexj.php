@@ -1,4 +1,4 @@
-
+<!--
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,15 +18,15 @@
     <main>
     <pre>
         <?php
-        function viewcd($el){
-            echo "<h2>{$el["title"]}";
-            echo "<p><img src={$el["poster"]}>";
-        }
-            include "api-users.php";
-            foreach($database as $el){
-                viewcd($el);
-            }
-        ?>
+  #      function viewcd($el){
+  #         echo "<h2>{$el["title"]}";
+  #          echo "<p><img src={$el["poster"]}>";
+   #     }
+   #         include "api-users.php";
+   #         foreach($database as $el){
+   #             viewcd($el);
+   #         }
+   #     ?>
 
         </pre>
 
